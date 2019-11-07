@@ -1,0 +1,16 @@
+---
+- name: debian | install package
+  apt:
+    name: "{{ package_name }}"
+    state: present
+  become: true
+
+- name: debian | configure package
+  template:
+    src: lldpd.j2
+    dest: "{{ package_config_directory }}/lldpd.conf"
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart lldpd
+  become: true

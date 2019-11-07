@@ -1,0 +1,6 @@
+---
+- name: restart lldpd
+  systemd:
+    name: lldpd.service
+    state: restarted
+  become: true

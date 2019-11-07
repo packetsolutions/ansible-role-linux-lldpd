@@ -1,0 +1,5 @@
+---
+lldpd_interfaces: enp0
+lldpd_cdp: true
+lldpd_cdp_version: v2
+lldpd_portid: ifname

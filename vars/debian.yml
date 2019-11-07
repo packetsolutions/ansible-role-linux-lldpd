@@ -1,0 +1,3 @@
+---
+package_name: lldpd
+package_config_directory: /etc/lldpd.d
